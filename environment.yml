@@ -1,0 +1,9 @@
+name: env_sar_calibration
+channels:
+  - terradue
+  - conda-forge
+dependencies:
+  - python
+  - click
+  - snap=8.0.0
+  - snapista
