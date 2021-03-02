@@ -8,3 +8,4 @@ dependencies:
   - snap=8.0.0
   - snapista
   - ipykernel
+  - matplotlib
