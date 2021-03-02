@@ -42,7 +42,7 @@ To get started, follow these steps:
 
 5. Run `Remote-Containers: Clone Repository in Container Volume...` from the Command Palette (F1)
 
-6. Add the URL to this git repository: `https://github.com/snap-contrib/vscode-remote-snap.git`
+6. Add the URL to this git repository: `https://github.com/snap-contrib/example-vscode-remote-snap-sar-calibration.git`
 
 7. Select the Volume mode 
 
