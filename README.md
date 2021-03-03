@@ -22,9 +22,7 @@ To get started, follow these steps:
 
     1. Install [Docker Desktop for Windows/Mac](https://www.docker.com/products/docker-desktop).
 
-    2. Right-click on the Docker task bar item, select **Settings / Preferences** and update **Resources > File Sharing** with any locations your source code is kept. See [tips and tricks](/docs/remote/troubleshooting.md#container-tips) for troubleshooting.
-
-    3. If you are using WSL 2 on Windows, to enable the [Windows WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2): Right-click on the Docker taskbar item and select **Settings**. Check **Use the WSL 2 based engine** and verify your distribution is enabled under **Resources > WSL Integration**.
+    2. If you are using Windows Subsystem for Linux (WSL) 2 on Windows, to enable the [Windows WSL 2 back-end](https://aka.ms/vscode-remote/containers/docker-wsl2): Right-click on the Docker taskbar item and select **Settings**. Check **Use the WSL 2 based engine** and verify your distribution is enabled under **Resources > WSL Integration**.
 
     **Linux**:
 
@@ -40,12 +38,17 @@ To get started, follow these steps:
 
 4. Install the [Remote Development extension pack](https://aka.ms/vscode-remote/download/extension).
 
-5. Run `Remote-Containers: Clone Repository in Container Volume...` from the Command Palette (F1)
+5. In Visual Studio Code, run `Remote-Containers: Clone Repository in Container Volume...` from the Command Palette (F1)
 
 6. Add the URL to this git repository: `https://github.com/snap-contrib/example-vscode-remote-snap-sar-calibration.git`
 
-7. Select the Volume mode 
+7. Select "Master" and Create New Volume 
 
 8. Wait a few minutes for the build to complete
 
-9. Exploit the `sar-calibration` command line utility or evolve the python project
+9. Activate conda env and install the 'sar-calibration' app:
+```
+conda activate env_snap
+python setup.py install
+``` 
+11. Exploit the `sar-calibration` command line utility or evolve the python project
