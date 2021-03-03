@@ -6,6 +6,8 @@ import click
 # from snapista import Graph
 from .calibration_s1 import graph_calibrate_s1
 
+os.environ['_JAVA_OPTIONS'] = '-Xms24g -Xmx24g'
+
 logging.basicConfig(
     stream=sys.stderr,
     level=logging.DEBUG,
@@ -19,11 +21,15 @@ logging.basicConfig(
 def main(safe):
 
     logging.info(f"{safe} calibration")
-
+    print(f"{safe} calibration")
+    
+    print('\nDefining the Graph')
     graph = graph_calibrate_s1(safe)
 
+    print('\nView the Graph')
     logging.info(graph.view())
-
+    
+    print('\nExecute the Graph') 
     graph.run()
 
     logging.info("Hello World!")
