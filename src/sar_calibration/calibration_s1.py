@@ -71,7 +71,7 @@ def graph_calibrate_s1(safe):
     print("Node: Write")
 
     g.add_node(
-        operator=Operator("Write", file=f"{identifier}_SIGMA0_VH_DB_2", formatName="GeoTIFF-BigTIFF"),
+        operator=Operator("Write", file=f"{identifier}_SIGMA0_VH_DB", formatName="GeoTIFF-BigTIFF"),
         node_id="write",
         source="subset",
     )
