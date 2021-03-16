@@ -54,7 +54,7 @@ def graph_calibrate_s1(safe):
 
     g.add_node(
         operator=Operator(
-            "Terrain-Correction", pixelSpacingInMeter="20.0", demName="SRTM 1Sec HGT"
+            "Terrain-Correction", pixelSpacingInMeter="20.0", demName="SRTM 3Sec"
         ),
         node_id="terrain-correction",
         source="linear",
@@ -71,7 +71,7 @@ def graph_calibrate_s1(safe):
     print("Node: Write")
 
     g.add_node(
-        operator=Operator("Write", file=f"{identifier}_SIGMA0_VH_DB", formatName="GeoTIFF-BigTIFF"),
+        operator=Operator("Write", file=f"{identifier}_SIGMA0_VV_DB", formatName="GeoTIFF-BigTIFF"),
         node_id="write",
         source="subset",
     )
