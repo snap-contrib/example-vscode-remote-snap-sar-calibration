@@ -30,7 +30,8 @@ def main(safe):
     logging.info(graph.view())
     
     print('\nExecute the Graph') 
-    graph.run()
+    # graph.run() # default gpt_options=["-x", "-c", "1024M"]
+    graph.run(gpt_options=["-x", "-c", "20000M"])
 
     logging.info("Hello World!")
 
